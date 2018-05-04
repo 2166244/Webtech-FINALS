@@ -1,0 +1,61 @@
+body{
+    margin: @ auto;
+    background-image: url("../images/city4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 950px;
+}
+.container{
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #224466;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 160px;
+    opacity: 0.8;
+    
+}
+
+.container img{
+    width: 150px;
+    height: 150px;
+    margin-top: -68px;
+    margin-right: 30px;
+    text-align: center;
+    border-radius: 50px;
+    
+}
+
+input[type="text"],input[type="password"]{
+    margin-top: 30px;
+    height: 45px;
+    width: 300px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding-left: 40px;
+}
+
+.form-input::before{
+    content: "\f007";
+    font-famili: "";
+    padding-left: 07px;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 35px;
+    color: #2980b9;
+}
+
+.form-input:nth-child(2)::before{
+    content: "\f023";
+}
+
+.btn-login{
+    padding: 15px 25px;
+    border: none;
+    margin-top: 30px;
+    background-color: #aa9999;
+    color: #fff;
+    border-radius: 50px;
+}
