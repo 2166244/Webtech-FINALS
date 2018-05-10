@@ -89,6 +89,7 @@ DROP TABLE IF EXISTS `service`;
 CREATE TABLE `service` (
   `service_id` int(11) NOT NULL AUTO_INCREMENT,
   `service_desc` varchar(45) NOT NULL,
+  `status` enum('A','D','W') NOT NULL,
   `vehi_id` int(11) NOT NULL,
   PRIMARY KEY (`service_id`),
   KEY `vehi_id` (`vehi_id`),
@@ -123,10 +124,10 @@ CREATE TABLE `user` (
   `email_add` varchar(45) NOT NULL,
   `contact_no` varchar(45) NOT NULL,
   `license_no` varchar(45) NOT NULL,
-  `service` enum('CU','CL','AD','SP') NOT NULL,
+  `service` enum('CU','AD','SP') NOT NULL,
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
-  `status` enum('A','D') NOT NULL,
+  `status` enum('A','D','W') NOT NULL,
   PRIMARY KEY (`customer_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -137,7 +138,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Ulep','Benjie','Manila','Pangasinan','0000-00-00','934','benjieulep@gmail.com','09987651234','12345678','CU','eijneeeeb','jiebeeeen','A'),(2,'Parayno','Chari','Baguio','Baguio','0000-00-00','643','chaiianne@gmail.comm','09275856053','1234568765','CL','chaiianne','12345678','A');
+INSERT INTO `user` VALUES (1,'Ulep','Benjie','Manila','Pangasinan','0000-00-00','934','benjieulep@gmail.com','09987651234','12345678','CU','eijneeeeb','jiebeeeen','A'),(2,'Parayno','Chari','Baguio','Baguio','0000-00-00','643','chaiianne@gmail.comm','09275856053','1234568765','','chaiianne','12345678','A');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -217,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-10 22:28:36
+-- Dump completed on 2018-05-11  1:06:37
