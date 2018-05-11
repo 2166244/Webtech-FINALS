@@ -1,0 +1,10 @@
+.bs-example{
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 2%;
+}
+
+.container-fluid{
+    padding-top: 35px;
+    background-color: #101010;
+}

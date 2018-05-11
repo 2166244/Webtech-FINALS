@@ -1,0 +1,79 @@
+<style>
+.container-fluid{
+	background-color: #000000
+}
+
+.navbar{
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #000000;
+  color:#FFF;
+  padding:10px 0;
+  font-size:1.2em;
+  border: 0;
+}
+.nav-brand{
+  float: left;
+  margin-top:7px;
+  max-width:100px;
+  min-height:55px;
+  padding: 0 15px 5px;
+}
+.navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:focus, .navbar-default .navbar-nav .active a:hover{
+  color:#000000;
+  background-color: #FFF;
+}
+.navbar-default .navbar-nav li a{
+  color:#D5D5D5;
+}
+.carousel-caption{
+  top:50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+.btn{
+  font-size: 15px;
+  color:#000000;
+  padding: 5px 10px;
+  background: #FFF;
+  border: 2px solid #FFF;
+}
+.container{
+  margin: 2% auto;
+}
+#icon{
+  max-width: 200px;
+  margin: 1%  auto;
+}
+
+
+.btn-link{
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #000000;
+  color:#FFF;
+}
+
+.bs-example{
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 5%;
+    padding-top: 3%;
+}
+
+.container-fluid{
+    padding-top: 10px;
+    background-color: #101010;
+}
+.navbar-brand{
+  float: left;
+  margin-top:7px;
+  max-width:100px;
+  min-height:55px;
+  padding: 0 15px 5px;
+}
+.modal-content{
+    margin-top: 10%;
+}
+
+</style>

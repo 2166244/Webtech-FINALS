@@ -1,0 +1,72 @@
+ body{
+	 padding-top:50px;
+
+ }
+ 
+ .navbar{
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #00000F;
+    color:#ffff;
+    padding:5% 0;
+    front-size:1.2em;
+    border: 0;
+  }
+
+.navbar-brand > img {
+    width: 30px;
+}
+
+.nav-brand{
+    float: left;
+    min-height:53px;
+    padding: 0 15px 5px;
+  }
+  
+  .navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:focus, .navbar-default .navbar-nav .active a:hover{
+    color:#FFF;
+    background-color: #0000FF;
+  }
+
+carousel-inner{
+    width: 100%;
+    height: 50%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #343a40;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-left: 700px;
+  font-size: 17px;
+}
+
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
