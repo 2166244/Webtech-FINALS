@@ -58,7 +58,6 @@
     <script src="assets/libs/bootstrap-calendar/js/bic_calendar.min.js"></script>
     <script src="assets/libs/jquery-datatables/js/jquery.dataTables.min.js"></script>
     <script src="assets/libs/jquery-datatables/js/dataTables.bootstrap.js"></script>
-    <script src="assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
     <script src="assets/js/pages/datatables.js"></script>
     <script src="assets/js/pages/index.js"></script>
 </body>
