@@ -23,13 +23,11 @@
     <link href="assets/libs/pace/pace.css" rel="stylesheet" />
     <link href="assets/libs/sortable/sortable-theme-bootstrap.css" rel="stylesheet" />
     <link href="assets/libs/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
-    <link href="assets/libs/jquery-icheck/skins/all.css" rel="stylesheet" />
     <!-- Extra CSS Libraries Start -->
     <link href="assets/libs/bootstrap-calendar/css/bic_calendar.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/sortable/sortable-theme-bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/bootstrap-xeditable/css/bootstrap-editable.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/jquery-datatables/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <!-- Extra CSS Libraries End -->
     <link href="assets/css/style-responsive.css" rel="stylesheet" />
