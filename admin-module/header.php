@@ -24,16 +24,9 @@
     <link href="assets/libs/sortable/sortable-theme-bootstrap.css" rel="stylesheet" />
     <link href="assets/libs/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
     <link href="assets/libs/jquery-icheck/skins/all.css" rel="stylesheet" />
-    <!-- Code Highlighter for Demo -->
-    <link href="assets/libs/prettify/github.css" rel="stylesheet" />
     <!-- Extra CSS Libraries Start -->
-    <link href="assets/libs/rickshaw/rickshaw.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/morrischart/morris.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/jquery-jvectormap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/jquery-clock/clock.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/bootstrap-calendar/css/bic_calendar.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/sortable/sortable-theme-bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/jquery-weather/simpleweather.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/bootstrap-xeditable/css/bootstrap-editable.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/jquery-datatables/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css" rel="stylesheet" type="text/css" />
