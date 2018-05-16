@@ -227,9 +227,6 @@ $( ".portlets" ).sortable({
     receive: function(event, ui) {$("body").trigger("resize")}
 });
 
-// Init Code Highlighter
-prettyPrint();
-
 //RUN RESIZE ITEMS
 $(window).resize(debounce(resizeitems,100));
 $("body").trigger("resize");
