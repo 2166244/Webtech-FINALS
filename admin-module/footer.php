@@ -40,7 +40,6 @@
     <script src="assets/libs/jquery-blockui/jquery.blockUI.js"></script>
     <script src="assets/libs/bootstrap-bootbox/bootbox.min.js"></script>
     <script src="assets/libs/jquery-slimscroll/jquery.slimscroll.js"></script>
-    <script src="assets/libs/jquery-sparkline/jquery-sparkline.js"></script>
     <script src="assets/libs/nifty-modal/js/classie.js"></script>
     <script src="assets/libs/nifty-modal/js/modalEffects.js"></script>
     <script src="assets/libs/sortable/sortable.min.js"></script>
@@ -52,19 +51,16 @@
     <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
     <script src="assets/libs/jquery-icheck/icheck.min.js"></script>
     <!-- Demo Specific JS Libraries -->
-    <script src="assets/libs/prettify/prettify.js"></script>
     <script src="assets/js/init.js"></script>
     <!-- Page Specific JS Libraries -->
-    <script src="assets/libs/d3/d3.v3.js"></script>
-    <script src="assets/libs/raphael/raphael-min.js"></script>
     <script src="assets/libs/jquery-knob/jquery.knob.js"></script>
     <script src="assets/libs/bootstrap-xeditable/js/bootstrap-editable.min.js"></script>
     <script src="assets/libs/bootstrap-calendar/js/bic_calendar.min.js"></script>
-    <script src="assets/js/pages/index.js"></script>
     <script src="assets/libs/jquery-datatables/js/jquery.dataTables.min.js"></script>
     <script src="assets/libs/jquery-datatables/js/dataTables.bootstrap.js"></script>
     <script src="assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
     <script src="assets/js/pages/datatables.js"></script>
+    <script src="assets/js/pages/index.js"></script>
 </body>
 
 </html>
