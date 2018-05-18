@@ -47,21 +47,6 @@ exports.login = function(req, res){
          }
                  
       });
-
-       var sql="SELECT user_id, first_name, last_name, username FROM `users` WHERE (`username`='"+name+"' and password = '"+pass+"')  and (status = 'active' and role='customer')";
-       db.query(sql, function(err, results){
-           if(results.length && results[0]){
-               req.session.userId = results[0].user_id;
-               req.session.user = results[0];
-               console.log(results[0].user_id);
-               res.redirect('home/dashboard');
-           }
-           else{
-               message = 'You are not yet registered';
-               res.render('index.ejs',{message: message});
-           }
-
-       });
    } else {
       res.render('index.ejs',{message: message});
    }
