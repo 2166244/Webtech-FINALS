@@ -41,12 +41,19 @@ exports.login = function(req, res){
                console.log(results[0].user_id);
                res.redirect('home/dashboard');
            }
-         else{
-            message = 'You are not yet registered';
-            res.render('index.ejs',{message: message});
-         }
-                 
+            else if(results.length && results[0]){
+               message = 'Wrong Credentials';
+               res.render('index.ejs',{message: message});
+            }
       });
+       var sql="SELECT * FROM `users` WHERE status = 'active' and role='customer'";
+       db.query(sql, function(err, results){
+           if(results.length && results[0]){
+               message = 'Wrong Credentials';
+               res.render('index.ejs',{message: message});
+           }
+       });
+
    } else {
       res.render('index.ejs',{message: message});
    }
@@ -64,8 +71,8 @@ exports.dashboard = function(req, res, next){
       return;
    }
 
-   var sql="SELECT * FROM `users` WHERE `user_id`='"+userId+"'";
-
+   //var sql="SELECT * FROM `users` WHERE `user_id`='"+userId+"'";
+    var sql = "SELECT * FROM `vehicles`";
    db.query(sql, function(err, results){
       res.render('dashboard.ejs', {user:user});    
    });       
@@ -102,4 +109,86 @@ exports.editprofile=function(req,res){
    db.query(sql, function(err, results){
       res.render('edit_profile.ejs',{data:results});
    });
+};
+//==========================| SHOW SERVICES |=============================
+exports.services_car = function(req,res){
+    var userId = req.session.userId;
+    if(userId == null){
+        res.redirect("/login");
+        return;
+    }
+
+    var sql="SELECT * from `vehicles` WHERE status = 'available'";
+    db.query(sql, function(err, results){
+        res.render('services.ejs',{data:results});
+    });
+};
+//==========================| SEARCH |=============================
+exports.search = function(req,res){
+    if(req.method == "POST") {
+        var item = req.body.search;
+        var sql = "SELECT * from `vehicles` where (model LIKE '%" + item + "%' or seating_capacity LIKE '%" + item + "%' or daily_rate LIKE '%" + item + "%') and status = 'available'";
+        db.query(sql, function (err, results) {
+            if(results.length) {
+                console.log(sql);
+                console.log(item);
+                res.render('search.ejs', {data: results});
+            } else {
+                console.log('SEARCH NOT EQUAL');
+            }
+        });
+    }
+};
+//==========================| SUBSCRIBE SERVICES |=============================
+exports.subscribe = function(req,res){
+    var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    var userId = req.session.userId;
+    if(userId == null){
+        res.redirect("/login");
+        return;
+    }
+    if(req.method == "POST") {
+        var post  = req.body;
+        var vehicleID= post.vehicle_id;
+        var userID= post.user_id;
+        var pickupDate= post.pickup_date;
+        var returnDate= post.return_date;
+
+        var post = req.body;
+        var sp_id = post.vehicle_id;
+        var numberOfDays = post.numberOfDays;
+
+        var message = post.explore;
+        console.log("Service Provider: " + message);
+
+        var sql = "INSERT INTO `reservation`(`vehicle_id`,`user_id`,``,`pickup_date`, `return_date`) VALUES ('" + vehicleID + "','" + userID + "','" + pickupDate + "','" + returnDate + "')";
+        db.query(sql, function(err, result){
+            if(!err){
+                console.log("A new record is added");
+                res.redirect("/home/dashboard");
+                console.log("Redirecting to dashboard...");
+            } else {
+                console.log("Failed to add the request");
+            }
+        });
+    }
+};
+
+//-----------------------------------------------dashboard page functionality----------------------------------------------
+
+exports.reserve_car = function(req, res, next){
+
+    var user =  req.session.user,
+        userId = req.session.userId;
+    console.log('customer_id:='+userId);
+    if(userId == null){
+        res.redirect("/login");
+        return;
+    }
+
+    //var sql="SELECT * FROM `users` WHERE `user_id`='"+userId+"'";
+    var sql = "SELECT * FROM `vehicles`";
+    db.query(sql, function(err, results){
+        res.render('reserve.ejs', {user:user});
+    });
 };

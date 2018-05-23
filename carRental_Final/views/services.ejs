@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Search Template</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,500,500i">
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/animate.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicon and touch icons -->
+  <link rel="shortcut icon" href="/assets/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/css1/style.css">
+  <link rel="stylesheet" href="/scss1/style.scss">
+</head>
+
+<body style="background: #d9dfe2;">
+
+<%- include header%>
+
+<div style="height: 30px;">
+
+</div>
+<% data.forEach(function(element) { %>
+<div class="container bg-white text-dark" >
+  <div class="row" style="border-left: 8px solid #052b42; background: #ffffff;">
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12">
+          <img class="img-thumbnail" src="data:picture/png; base64 , <%=new Buffer( element.picture, 'binary' ).toString('base64')%>" style="width: 450px;height:230px;">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-6 pt-5">
+          <div style="height: 30px;"></div>
+          <h3><strong style="color: #2e3b51; font-size: 30px;"><%=element.model %></strong></h3>
+          <div class="pt-4">
+            <img style="height: 28px; width: 28px; color: yellow;" src="/images/seating.png" alt=""><%=element.seating_capacity %><span class="p-3"> Seats</span>
+            <img style="height: 28px; width: 28px; color: yellow;" src="/images/ac.png" alt=""><span class="p-3"><%=element.air_conditioned %> AC</span>
+            <img style="height: 28px; width: 30px; color: yellow;" src="/images/luggage.png" alt=""><span class="p-3"><%=element.luggage_capacity %> Luggage</span>
+          </div>
+          <div style="height: 20px;"></div>
+          <div class="pt-5">
+            <img style="height: 28px; width: 28px; color: yellow;" src="/images/pickup.png" alt=""><span class="p-3"> Pickup-location: </span><%=element.pickup_location %>
+          </div>
+          <div style="height: 10px;"></div>
+          <div class="pt-5">
+            <span style="color:#8b93a0; font-size: 12px;">FEATURES: </span>
+            <img style="height: 28px; width: 28px; color: yellow;" src="/images/check.png" alt=""><span class="p-3"> Pay at pickup</span>
+            <img style="height: 28px; width: 28px; color: yellow;" src="/images/check.png" alt=""><span class="p-3"> Free Cancellation</span>
+            <img style="height: 28px; width: 28px; color: yellow;" src="/images/check.png" alt=""><span class="p-3"> Unlimited Mileage</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div style="height: 30px;"></div>
+          <div class="p-5">
+            <h3 style="color: #2e3b51; font-size: 30px;">&#x20B1; <%=element.daily_rate %> /<span style="font-size: 20px"> DAY</span> </h3>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="border-left: 8px solid #052b42; background: #ffffff;">
+    <div class="col-md-12">
+      <div class="form-group">
+        <h2 class="heading">Details</h2>
+        <div class="grid">
+          <div class="col-1-4 col-1-4-sm">
+            <div class="controls">
+              <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+              <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Pick-up Date</label>
+            </div>
+          </div>
+          <div class="col-1-4 col-1-4-sm">
+            <div class="controls">
+              <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+              <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Return Date</label>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="/home/dashboard" role="button">Reserve</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 30px;">
+
+  </div>
+</div>
+<% }); %>
+
+
+
+
+<!-- Footer -->
+<%- include footer%>
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery-ui-autocomplete.js'></script>
+<script src='http://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery.select-to-autocomplete.js'></script>
+<script src='http://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery.select-to-autocomplete.min.js'></script>
+
+
+
+<script  src="/js1/index.js"></script>
+
+
+
+
+<!-- Javascript -->
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.backstretch.min.js"></script>
+<script src="/assets/js/wow.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+
+<!--[if lt IE 10]>
+<script src="/assets/js/placeholder.js"></script>
+<![endif]-->
+
+</body>
+
+</html>
+

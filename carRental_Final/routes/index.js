@@ -7,3 +7,8 @@ exports.index = function(req, res){
   res.render('index',{message: message});
  
 };
+exports.login = function(req, res){
+    var message = '';
+    res.render('login',{message: message});
+
+};

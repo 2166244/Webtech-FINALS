@@ -1,0 +1,138 @@
+
+.container-fluid{
+	background-color: #000000
+}
+
+.navbar{
+  margin-bottom: 0px !important;
+  border-radius: 0;
+  background-color: #000000;
+  color:#FFF;
+  padding:0px 0;
+  font-size:1.2em;
+  border: 0;
+}
+.nav-brand{
+  float: left;
+  margin-top:7px;
+  max-width:100px;
+  min-height:55px;
+  padding: 0 15px 5px;
+}
+.navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:focus, .navbar-default .navbar-nav .active a:hover{
+  color:#000000;
+  background-color: #FFF;
+}
+.navbar-default .navbar-nav li a{
+  color:#D5D5D5;
+}
+.carousel-caption{
+  top:50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+.btn{
+  font-size: 15px;
+  color:#000000;
+  padding: 5px 10px;
+  background: #FFF;
+  border: 2px solid #FFF;
+}
+.container{
+  margin: 4% auto;
+}
+#icon{
+  max-width: 200px;
+  margin: 1%  auto;
+}
+
+@media (max-width: 600px){
+  .carousel-caption{
+    display: none;
+  }
+  #icon{
+    max-width:150px;
+  }
+  h4{
+    font-size: 1.7em;
+  }
+}
+
+.btn-link{
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #000000;
+  color:#FFF;
+}
+
+.bs-example{
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 5%;
+}
+
+.container-fluid{
+    padding-top: 10px;
+    background-color: #101010;
+}
+.navbar-brand{
+  float: left;
+  margin-top:7px;
+  max-width:100px;
+  min-height:55px;
+  padding: 0 15px 5px;
+}
+.modal-content{
+    margin-top: 10%;
+}
+
+.bs-example{
+	font-family: sans-serif;
+	position: relative;
+	margin: 10px;
+    float: right;
+}
+.typeahead, .tt-query, .tt-hint {
+	border: 2px solid #CCCCCC;
+	border-radius: 8px;
+	font-size: 24px;
+	height: 30px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 300px;
+}
+.typeahead {
+	background-color: white;
+}
+.typeahead:focus {
+	border: 2px solid #0097CF;
+    color: black;
+}
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: black;
+}
+.tt-dropdown-menu {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+	width: 422px;
+}
+.tt-suggestion {
+	font-size: 24px;
+	line-height: 24px;
+	padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}

@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
               host     : 'localhost',
               user     : 'root',
               password : '',
-              database : 'rental1'
+              database : 'rental'
             });
  
 connection.connect();
@@ -46,6 +46,11 @@ app.post('/login', user.login);//call for login post
 app.get('/home/dashboard', user.dashboard);//call for dashboard page after login
 app.get('/home/logout', user.logout);//call for logout
 app.get('/home/profile',user.profile);//to render users profile
+app.get('/home/services_car', user.services_car); //to render users services
+app.post('/home/search', user.search); //search functionality
+app.post('/home/subscribe', user.subscribe); //call for subscribe
+app.get('/home/reserve_car', user.reserve_car); //call for reservation
+
 //Middleware
 console.log("Server is running on port 8080");
 app.listen(8080)
