@@ -23,7 +23,7 @@ app.use(express.static("public"));
 global.db = connection;
  
 // all environments
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 8084);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -48,9 +48,7 @@ app.get('/home/logout', user.logout);//call for logout
 app.get('/home/profile',user.profile);//to render users profile
 app.get('/home/services_car', user.services_car); //to render users services
 app.post('/home/search', user.search); //search functionality
-app.post('/home/subscribe', user.subscribe); //call for subscribe
-app.get('/home/reserve_car', user.reserve_car); //call for reservation
 
 //Middleware
-console.log("Server is running on port 8080");
-app.listen(8080)
+console.log("Server is running on port 8084");
+app.listen(8084)
