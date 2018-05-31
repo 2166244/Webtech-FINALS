@@ -1,0 +1,52 @@
+.signup-page-container.signup-form-open
+  .signup__container.signup-form
+    .container__child.signup__thumbnail(style='background: url(https://p.w3layouts.com/demos_new/template_demo/19-06-2017/assets-demo_Free/554297363/web/images/7.jpg);')
+      .thumbnail__logo
+        img(src='http://192.168.1.6:8080/house-rent-management/owner_front_end/assets/img/logo.png' alt='')
+      .thumbnail__content.text-center
+        h1.heading--primary Welcome to Navbar
+        h2.heading--secondary Are you ready to join?
+      .signup__overlay
+    .container__child.signup__form
+      form(action='#')
+        .form-group
+          label(for='username') Username
+          input#username.form-control(type='text' name='username' placeholder='' required='')
+        .form-group
+          label(for='email') Email
+          input#email.form-control(type='email' name='email' placeholder='' required='')
+        .form-group
+          label(for='password') Password
+          input#password.form-control(type='password' name='password' placeholder='' required='')
+        .form-group
+          label(for='passwordRepeat') Repeat Password
+          input#passwordRepeat.form-control(type='password' name='passwordRepeat' placeholder='' required='')
+        .m-t-lg
+          ul.list-inline
+            li
+              input.btn.btn--form(type='submit' value='Register')
+            li
+              a#signup__link.signup__link(href='#') I am already a member
+  .login-container
+    .signup__container
+      .container__child.signup__form
+        form(action='#')
+          .form-group
+            label(for='email') Email
+            input#email.form-control(type='email' name='email' placeholder='' required='')
+          .form-group
+            label(for='password') Password
+            input#password.form-control(type='password' name='password' placeholder='' required='')
+          .m-t-lg
+            ul.list-inline
+              li
+                input.btn.btn--form(type='submit' value='Login')
+              li
+                a#login__link.signup__link(href='#') Create a new member
+      .container__child.signup__thumbnail(style='background: url(https://p.w3layouts.com/demos_new/template_demo/19-06-2017/assets-demo_Free/554297363/web/images/7.jpg);')
+        .thumbnail__logo
+          img(src='http://192.168.1.6:8080/house-rent-management/owner_front_end/assets/img/logo.png' alt='')
+        .thumbnail__content.text-center
+          h1.heading--primary Welcome to Navbar
+          h2.heading--secondary Are you ready to login?
+        .signup__overlay
